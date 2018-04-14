@@ -1,8 +1,4 @@
 import java.util.Random;
-import java.util.concurrent.locks.Lock;
-// import java.util.concurrent.locks.ReadWriteLock;
-// import java.util.concurrent.locks.ReentrantLock;
-// import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class ReadWriteNonexclusiveTest {
 	public static void main(String[] args) {
@@ -30,7 +26,7 @@ public class ReadWriteNonexclusiveTest {
 class Data {	
 	private int data;	
 	public void set(int data) {
-		System.out.println(Thread.currentThread().getName() + " is writing data: " + data);
+		System.out.println(Thread.currentThread().getName() + " will set data");
 		try {
 			Thread.sleep(20);
 		} catch (InterruptedException e) {
@@ -40,7 +36,7 @@ class Data {
 		System.out.println(Thread.currentThread().getName() + " set the data: " + this.data);
 	}	
 	public void get() {
-		System.out.println(Thread.currentThread().getName() + " is reading data: " + this.data);
+		System.out.println(Thread.currentThread().getName() + " will read data");
 		try {
 			Thread.sleep(20);
 		} catch (InterruptedException e) {

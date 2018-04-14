@@ -1,8 +1,6 @@
 import java.util.Random;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReadWriteLock;
 
-public class ReadWriteLockTest {
+public class ReadWriteAllExclusiveTest {
 	public static void main(String[] args) {
 		final Data data = new Data();
 		for (int i = 0; i < 2; i++) {
